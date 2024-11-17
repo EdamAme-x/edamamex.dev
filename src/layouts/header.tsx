@@ -57,6 +57,8 @@ const HeaderContents = memo(() => {
     </>
 })
 
+HeaderContents.displayName = "HeaderContents"
+
 const Logo = () => {
     return <Link href="/" prefetch className="mr-[60px]">
         <Image src={LogoImage} alt="logo" width={32} height={32} className="filter grayscale-[0.1]" style={{

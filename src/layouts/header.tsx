@@ -49,8 +49,6 @@ export const Header = () => {
     )
 }
 
-Header.displayName = "Header"
-
 const HeaderContents = memo(() => {
     return <>
         <Logo />

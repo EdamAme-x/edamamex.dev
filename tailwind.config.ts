@@ -55,17 +55,17 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       animation: {
-        spotlight: "spotlight 2s ease .75s 1 forwards",
+        spotlight: "spotlight 1s ease .75s 1 forwards",
       },
       keyframes: {
         spotlight: {
           "0%": {
             opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
+            transform: "translate(-72%, -62%) scale(0.75)",
           },
           "100%": {
             opacity: "1",
-            transform: "translate(-50%,-40%) scale(2)",
+            transform: "translate(-50%,-40%) scale(1.75)",
           },
         },
       },

@@ -18,7 +18,6 @@ export const Hero = () => {
             }}>Limitless</span> 
             <FlipWords words={words} className="font-bold text-[12rem] mt-[-70px] bg-clip-text text-transparent" style={{
                 backgroundImage: "linear-gradient(135deg, #CDF3FF 0%, #CCF3FB 33.33%, #EF84AF 66.67%, #D683A6 100%)",
-                opacity: 0.7
             }} duration={3000} />
         </h1>
         <h2 className="text-xl font-regular text-[#b2b2b2]">I am a developer and OSS contributor.</h2>

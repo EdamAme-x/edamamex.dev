@@ -6,10 +6,29 @@ import LogoImage from "@/public/favicon.webp"
 import { socialLinks } from "@/consts/social-links"
 import { headerLinks } from "@/consts/header"
 import { usePathname } from "next/navigation"
-import { motion, useScroll } from "motion/react"
+import { motion, useScroll, useAnimation, useMotionValueEvent } from "motion/react"
+import { memo } from "react"
 
 export const Header = () => {
-    const { scrollYProgress } = useScroll()
+    const { scrollY } = useScroll()
+    const controls = useAnimation();
+
+    const floatHeaderVariants = {
+        initial: {
+            y: 20
+        },
+        float: {
+            y: 0
+        }
+    }
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        if (latest > 50) {
+            controls.start("float")
+        }else {
+            controls.start("initial")
+        }
+    })
 
     return (
         <motion.header className={mergeClass(
@@ -21,13 +40,22 @@ export const Header = () => {
             style={{
                 backdropFilter: "blur(24px) saturate(140%)"
             }}
+            initial="initial"
+            variants={floatHeaderVariants}
+            animate={controls}
         >
-            <Logo />
-            <HeaderLinks />
-            <SocialLinks />
+            <HeaderContents />
         </motion.header>
     )
 }
+
+const HeaderContents = memo(() => {
+    return <>
+        <Logo />
+        <HeaderLinks />
+        <SocialLinks />
+    </>
+})
 
 const Logo = () => {
     return <Link href="/" prefetch className="mr-[60px]">
@@ -48,7 +76,8 @@ const HeaderLinks = () => {
             headerLinks.map(({ url, icon: Icon, title, size }) => {
                     return <Link key={url} href={url} prefetch className={mergeClass(
                         "inline-flex items-center gap-[0.5rem] h-[30px] px-[1rem] py-[0.25rem] rounded-[0.75rem]",
-                        path === url ? "bg-[#9595954d] border border-[#515156]" : "border border-[#00000000] hover:bg-[#9595951c] hover:border-[#515156cc]",
+                        "border border-[#00000000]",
+                        path === url ? "bg-[#9595954d] !border-[#515156]" : "hover:bg-[#9595951c] hover:border-[#515156cc]",
                         "transition-all duration-300"
                     )}>
                     <Icon size={size || 18} /> <span className="text-[0.875rem] px-[0.125rem] pb-[2px]">{title}</span>

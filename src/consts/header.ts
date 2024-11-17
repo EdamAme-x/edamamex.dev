@@ -6,35 +6,35 @@ import { MdMailOutline } from "react-icons/md";
 import type { IconType } from "react-icons";
 
 export const headerLinks = [
-    {
-        url: "/",
-        icon: GrHomeRounded,
-        title: "Home",
-        size: 14
-    },
-    {
-        url: "/about",
-        icon: CgProfile,
-        title: "About"
-    },
-    {
-        url: "/work",
-        icon: RiLayoutGridLine,
-        title: "Work"
-    },
-    {
-        url: "/blog",
-        icon: LuBookMarked,
-        title: "Blog"
-    },
-    {
-        url: "/contact",
-        icon: MdMailOutline,
-        title: "Contact"
-    }
+  {
+    url: "/",
+    icon: GrHomeRounded,
+    title: "Home",
+    size: 14,
+  },
+  {
+    url: "/about",
+    icon: CgProfile,
+    title: "About",
+  },
+  {
+    url: "/work",
+    icon: RiLayoutGridLine,
+    title: "Work",
+  },
+  {
+    url: "/blog",
+    icon: LuBookMarked,
+    title: "Blog",
+  },
+  {
+    url: "/contact",
+    icon: MdMailOutline,
+    title: "Contact",
+  },
 ] satisfies Readonly<{
-    url: `/${string}`;
-    icon: IconType;
-    title: string;
-    size?: number;
-}[]>
+  url: `/${string}`;
+  icon: IconType;
+  title: string;
+  size?: number;
+}[]>;

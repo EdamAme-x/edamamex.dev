@@ -7,21 +7,21 @@ const siteName = "EdamAmex Portfolio";
 const description = "A portfolio of EdamAmex";
 
 export const metadata: Metadata = {
-	metadataBase: new URL(url),
-	title: siteName,
-	description,
-	openGraph: {
-		title: siteName,
-		description,
-		url,
-		siteName,
-		locale: "en-US",
-		type: "website",
-		images: ogpCoverImage
-	},
-	icons: iconImage,
-	publisher: `@EdamAme-x`,
-	robots: "index, follow",
-	creator: `@EdamAme-x`,
-	keywords: ["amex2189", "EdamAme-x", "EdamAmex"],
+  metadataBase: new URL(url),
+  title: siteName,
+  description,
+  openGraph: {
+    title: siteName,
+    description,
+    url,
+    siteName,
+    locale: "en-US",
+    type: "website",
+    images: ogpCoverImage,
+  },
+  icons: iconImage,
+  publisher: `@EdamAme-x`,
+  robots: "index, follow",
+  creator: `@EdamAme-x`,
+  keywords: ["amex2189", "EdamAme-x", "EdamAmex"],
 };

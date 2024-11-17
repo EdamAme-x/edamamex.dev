@@ -1,7 +1,7 @@
-import { IconType } from "react-icons";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa6";
+import type { IconType } from "react-icons";
 
 export const socialLinks = [
     {

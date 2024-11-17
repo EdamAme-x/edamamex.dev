@@ -3,7 +3,7 @@ import { CgProfile } from "react-icons/cg";
 import { RiLayoutGridLine } from "react-icons/ri";
 import { LuBookMarked } from "react-icons/lu";
 import { MdMailOutline } from "react-icons/md";
-import { IconType } from "react-icons";
+import type { IconType } from "react-icons";
 
 export const headerLinks = [
     {

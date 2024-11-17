@@ -43,9 +43,6 @@ export const Header = () => {
         "flex justify-between items-center",
         "px-10 py-5 mx-auto",
       )}
-      style={{
-        backdropFilter: "blur(24px) saturate(140%)",
-      }}
       initial="initial"
       variants={floatHeaderVariants}
       animate={controls}
@@ -94,8 +91,15 @@ const HeaderLinks = () => {
       style={{
         boxShadow:
           "0px 2px 4px rgba(0,0,0,.12),0px 8px 12px rgba(0,0,0,.08),0px 8px 16px rgba(0,0,0,.08)",
+        backdropFilter: "blur(24px) saturate(140%)",
       }}
     >
+      <div 
+        className="left-1/2 top-0 w-[300px] center pointer-events-none absolute h-px max-w-full -translate-x-1/2 -translate-y-1/2" 
+        style={{
+          background: "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.0) 0%, rgba(143, 143, 143, 0.97) 50%, rgba(0, 0, 0, 0) 100%)"
+        }}
+      ></div>
       {headerLinks.map(({ url, icon: Icon, title, size }) => {
         return (
           <Link

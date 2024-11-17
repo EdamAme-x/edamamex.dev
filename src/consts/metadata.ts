@@ -19,6 +19,12 @@ export const metadata: Metadata = {
     type: "website",
     images: ogpCoverImage,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: siteName,
+    description,
+    images: ogpCoverImage,
+  },
   icons: iconImage,
   publisher: `@EdamAme-x`,
   robots: "index, follow",

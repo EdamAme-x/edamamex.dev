@@ -3,7 +3,6 @@ import { mergeClass } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import LogoImage from "@/public/favicon.webp";
-import { socialLinks } from "@/consts/social-links";
 import { headerLinks } from "@/consts/header";
 import { usePathname } from "next/navigation";
 import {
@@ -13,6 +12,8 @@ import {
   useScroll,
 } from "motion/react";
 import { memo } from "react";
+import { NeonButton } from "@/components/ui/neon-button";
+import { Send } from "lucide-react";
 
 export const Header = () => {
   const { scrollY } = useScroll();
@@ -57,7 +58,7 @@ const HeaderContents = memo(() => {
     <>
       <Logo />
       <HeaderLinks />
-      <SocialLinks />
+      <BookACall />
     </>
   );
 });
@@ -127,23 +128,12 @@ const HeaderLinks = () => {
   );
 };
 
-const SocialLinks = () => {
+const BookACall = () => {
   return (
-    <div className="flex items-center gap-4">
-      {socialLinks.map(({ url, icon: Icon, alt }) => {
-        return (
-          <Link
-            key={url}
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            title={alt}
-          >
-            <Icon size={20} />
-          </Link>
-        );
-      })}
-    </div>
+    <NeonButton>
+      <Send size={15} /> 
+      <span>Get in touch</span>
+    </NeonButton>
   );
 };
 

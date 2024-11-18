@@ -1,6 +1,3 @@
-/**
- * @noskid
- */
 import { cn } from "@/lib/utils";
 import css from "./index.module.css"
 
@@ -24,3 +21,5 @@ export const NeonButton = ({ className, children, ...props }: React.ComponentPro
         </button>
     );
 };
+
+// Created by github.com/EdamAme-x

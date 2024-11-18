@@ -11,7 +11,7 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
     <svg
       className={cn(
         "animate-spotlight pointer-events-none absolute z-[0]  h-[169%] w-[138%] lg:w-[84%] opacity-0",
-        className
+        className,
       )}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 3787 2842"
@@ -26,7 +26,8 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
           transform="matrix(-0.822377 -0.568943 -0.568943 0.822377 3631.88 2291.09)"
           fill={fill || "white"}
           fillOpacity="0.21"
-        ></ellipse>
+        >
+        </ellipse>
       </g>
       <defs>
         <filter
@@ -44,11 +45,13 @@ export const Spotlight = ({ className, fill }: SpotlightProps) => {
             in="SourceGraphic"
             in2="BackgroundImageFix"
             result="shape"
-          ></feBlend>
+          >
+          </feBlend>
           <feGaussianBlur
             stdDeviation="151"
             result="effect1_foregroundBlur_1065_8"
-          ></feGaussianBlur>
+          >
+          </feGaussianBlur>
         </filter>
       </defs>
     </svg>

@@ -7,7 +7,7 @@ export const FlipWords = ({
   words,
   duration = 3000,
   className,
-  style
+  style,
 }: {
   words: string[];
   duration?: number;
@@ -28,10 +28,11 @@ export const FlipWords = ({
   useEffect(() => {
     if (!isRendered) setIsRendered(true);
 
-    if (!isAnimating)
+    if (!isAnimating) {
       setTimeout(() => {
         startAnimation();
       }, duration);
+    }
   }, [isAnimating, duration, startAnimation]);
 
   return (
@@ -82,35 +83,36 @@ export const FlipWords = ({
             <span className="inline-block">&nbsp;</span>
           </span>
         ))}
-        {isRendered && currentWord.split(" ").map((word, wordIndex) => (
-          <motion.span
-            key={word + wordIndex}
-            initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{
-              delay: wordIndex * 0.3,
-              duration: 0.3,
-            }}
-            className="inline-block whitespace-nowrap"
-          >
-            {word.split("").map((letter, letterIndex) => (
-              <motion.span
-                key={word + letterIndex}
-                initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
-                animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                transition={{
-                  delay: wordIndex * 0.3 + letterIndex * 0.05,
-                  duration: 0.2,
-                }}
-                className={mergeClass("inline-block", className)}
-                style={style}
-              >
-                {letter}
-              </motion.span>
-            ))}
-            <span className="inline-block">&nbsp;</span>
-          </motion.span>
-        ))}
+        {isRendered &&
+          currentWord.split(" ").map((word, wordIndex) => (
+            <motion.span
+              key={word + wordIndex}
+              initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{
+                delay: wordIndex * 0.3,
+                duration: 0.3,
+              }}
+              className="inline-block whitespace-nowrap"
+            >
+              {word.split("").map((letter, letterIndex) => (
+                <motion.span
+                  key={word + letterIndex}
+                  initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  transition={{
+                    delay: wordIndex * 0.3 + letterIndex * 0.05,
+                    duration: 0.2,
+                  }}
+                  className={mergeClass("inline-block", className)}
+                  style={style}
+                >
+                  {letter}
+                </motion.span>
+              ))}
+              <span className="inline-block">&nbsp;</span>
+            </motion.span>
+          ))}
       </motion.div>
     </AnimatePresence>
   );

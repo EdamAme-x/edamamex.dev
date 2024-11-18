@@ -95,12 +95,14 @@ const HeaderLinks = () => {
         backdropFilter: "blur(24px) saturate(140%)",
       }}
     >
-      <div 
-        className="left-1/2 top-0 w-[300px] center pointer-events-none absolute h-px max-w-full -translate-x-1/2 -translate-y-1/2" 
+      <div
+        className="left-1/2 top-0 w-[300px] center pointer-events-none absolute h-px max-w-full -translate-x-1/2 -translate-y-1/2"
         style={{
-          background: "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.0) 0%, rgba(143, 143, 143, 0.97) 50%, rgba(0, 0, 0, 0) 100%)"
+          background:
+            "linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.0) 0%, rgba(143, 143, 143, 0.97) 50%, rgba(0, 0, 0, 0) 100%)",
         }}
-      ></div>
+      >
+      </div>
       {headerLinks.map(({ url, icon: Icon, title, size }) => {
         return (
           <Link
@@ -130,10 +132,12 @@ const HeaderLinks = () => {
 
 const BookACall = () => {
   return (
-    <NeonButton>
-      <Send size={15} /> 
-      <span>Get in touch</span>
-    </NeonButton>
+    <Link href="/contact" prefetch>
+      <NeonButton>
+        <Send size={15} />
+        <span>Get in touch</span>
+      </NeonButton>
+    </Link>
   );
 };
 

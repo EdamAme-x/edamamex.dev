@@ -67,7 +67,7 @@ HeaderContents.displayName = "HeaderContents";
 
 const Logo = () => {
   return (
-    <Link href="/" prefetch className="mr-[60px]">
+    <Link href="/" prefetch className="mx-[50px]">
       <Image
         src={LogoImage}
         alt="logo"

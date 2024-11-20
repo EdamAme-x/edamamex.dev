@@ -119,7 +119,7 @@ const HeaderLinks = () => {
             )}
           >
             <Icon size={size || 18} />{" "}
-            <span className="text-[0.875rem] px-[0.125rem]">
+            <span className="text-[0.875rem] px-[0.125rem] pb-0.5">
               {title}
             </span>
           </Link>

@@ -1,0 +1,23 @@
+.aboutMeButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: #ffffff01;
+    box-shadow: 0 0 10px #ffffff1a;
+}
+
+.aboutMeButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: #ffffff01;
+    box-shadow: 0 10px 10px #ffffff12;
+}

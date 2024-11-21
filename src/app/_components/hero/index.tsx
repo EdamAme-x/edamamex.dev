@@ -5,6 +5,7 @@ import ShinyStar from "./shiny-star.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
 import { AboutMeButton } from "./buttons";
+import { WhitenessText } from "./whiteness-text";
 
 export const Hero = () => {
   return (
@@ -54,9 +55,3 @@ const HeroBranding = () => {
     </div>
   );
 };
-
-const WhitenessText = ({ text }: { text: string }) => {
-  return <span className="bg-clip-text text-transparent " style={{
-    backgroundImage: "linear-gradient(180deg,color(display-p3 .9411764706 .9333333333 .9764705882/.8) 0%,color(display-p3 .8862745098 .9098039216 1/1) 100%)"
-  }}>{text}</span>
-}

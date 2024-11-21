@@ -4,8 +4,9 @@ import AnimatedGradientText from "@/components/ui/animated-gradient-text";
 import ShinyStar from "./shiny-star.svg";
 import { IoIosArrowForward } from "react-icons/io";
 import Image from "next/image";
-import { AboutMeButton } from "./buttons";
+import { AboutMeButton, SocialLinkButton } from "./buttons";
 import { WhitenessText } from "./whiteness-text";
+import { socialLinks } from "@/consts/social-links";
 
 export const Hero = () => {
   return (
@@ -48,8 +49,15 @@ const HeroBranding = () => {
         <h2 className="text-md font-light text-gray-500">
           I{"'"}m a Web developer and OSS contributor.
         </h2>
-        <div className="w-full pt-5">
+        <div className="w-full mt-10 flex items-center">
           <AboutMeButton />
+          <div className="flex items-center gap-4 ml-44">
+            {
+              socialLinks.map(({ url, icon: Icon, alt }) => {
+                return <SocialLinkButton key={url} url={url} Icon={Icon} alt={alt} />;
+              })
+            }
+          </div>
         </div>
       </div>
     </div>

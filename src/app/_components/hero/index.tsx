@@ -33,9 +33,9 @@ const HeroBranding = () => {
         <div className="w-full mb-2">
           <AnimatedGradientText>
             <Image src={ShinyStar} alt="Shiny Star" className="inline h-4 w-4" />
-            <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300" />{" "}
+            <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300/50" />{" "}
             <span
-              className="inline animate-gradient bg-gradient-to-r from-purple-400/75 via-pink-300 to-purple-400/75 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent"
+              className="inline text-xs py-[1px] animate-gradient bg-gradient-to-r from-purple-400/75 via-pink-300 to-purple-400/75 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent"
             >
               Latest Blog Post
             </span>

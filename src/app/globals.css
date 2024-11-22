@@ -1,7 +1,9 @@
 @import url("@/styles/no-scrollbar.css");
 @import url("@/styles/global-font.css");
 @import url("@/styles/user-select.css");
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
   :root {

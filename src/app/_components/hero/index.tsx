@@ -7,6 +7,7 @@ import Image from "next/image";
 import { AboutMeButton, SocialLinkButton } from "./buttons";
 import { WhitenessText } from "./whiteness-text";
 import { socialLinks } from "@/consts/social-links";
+import HeroSvg from "./hero.svg";
 
 export const Hero = () => {
   return (
@@ -17,6 +18,9 @@ export const Hero = () => {
       )}
     >
       <HeroBranding />
+      <div className="w-1/2 h-full flex justify-end">
+        <Image src={HeroSvg} alt="hero w-full" />
+      </div>
     </div>
   );
 };
@@ -25,7 +29,7 @@ const HeroBranding = () => {
   return (
     <div
       className={mergeClass(
-        "w-1/2 h-screen",
+        "w-1/2 h-full",
         "flex flex-col justify-center items-end gap-4",
       )}
     >
@@ -47,7 +51,7 @@ const HeroBranding = () => {
           <span className="bg-clip-text text-transparent bg-gradient-to-br from-sky-300 to-pink-400 [filter:drop-shadow(0_0px_12px_rgba(178,178,178,.3))] pb-1">Creativity</span>
         </h1>
         <h2 className="text-md font-light text-gray-500">
-          I{"'"}m a Web developer and OSS contributor.
+          I{"'"}m Web developer and OSS contributor.
         </h2>
         <div className="w-full mt-10 flex items-center">
           <AboutMeButton />

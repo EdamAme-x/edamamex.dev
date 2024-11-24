@@ -7,7 +7,7 @@ import Image from "next/image";
 import { AboutMeButton, SocialLinkButton } from "./buttons";
 import { WhitenessText } from "./whiteness-text";
 import { socialLinks } from "@/consts/social-links";
-import HeroSvg from "./hero.svg";
+import { Object } from "./object";
 
 export const Hero = () => {
   return (
@@ -18,8 +18,8 @@ export const Hero = () => {
       )}
     >
       <HeroBranding />
-      <div className="w-1/2 h-full flex justify-end">
-        <Image src={HeroSvg} alt="hero w-full" />
+      <div className="w-1/2 h-full flex justify-end items-center">
+          <Object />
       </div>
     </div>
   );

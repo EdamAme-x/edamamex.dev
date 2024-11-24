@@ -7,7 +7,7 @@ export default function Home() {
       <Hero />
       <Sparkles
         background="transparent"
-        className="fixed top-0 w-screen h-screen"
+        className="fixed top-0 z-[-1] w-screen h-screen"
         maxSize={1.5}
         speed={2}
         particleDensity={5}

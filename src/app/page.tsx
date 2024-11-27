@@ -10,8 +10,8 @@ export default function Home() {
         className="fixed top-0 z-[-1] w-screen h-screen"
         maxSize={1.5}
         speed={2}
-        particleDensity={5}
-        particleColor={["#7E59FE", "#FF8C00"]}
+        particleDensity={4}
+        particleColor={["#7E59FE88", "#FF8C0088", "#FFFFFF11"]}
       />
     </>
   );

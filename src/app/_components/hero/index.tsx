@@ -7,7 +7,7 @@ import Image from "next/image";
 import { AboutMeButton, SocialLinkButton } from "./buttons";
 import { WhitenessText } from "./whiteness-text";
 import { socialLinks } from "@/consts/social-links";
-import { Object } from "./object";
+// import { Object } from "./object";
 
 export const Hero = () => {
   return (

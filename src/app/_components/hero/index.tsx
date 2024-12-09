@@ -19,7 +19,7 @@ export const Hero = () => {
     >
       <HeroBranding />
       <div className="w-1/2 h-full flex justify-end items-center">
-          <Object />
+          {/* <Object /> */}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 .aboutMeButton {
-    background: radial-gradient(circle at 50% 80%, #ffffff15, #000000,  #ffffff01, #22d3ee12, #22d3ee22);
+    background: radial-gradient(circle at 50% 80%, #0e000012, #000000,  #ffffff01, #22d3ee12, #22d3ee22);
 }
 
 .aboutMeButton::before {
@@ -11,7 +11,7 @@
     height: 100%;
     border-radius: inherit;
     background: #ffffff01;
-    box-shadow: 0 0 10px #ffffff1a;
+    box-shadow: 0 0 10px #0e000012;
 }
 
 .aboutMeButton::after {
@@ -23,5 +23,5 @@
     height: 100%;
     border-radius: inherit;
     background: #ffffff01;
-    box-shadow: 0 1px 10px #02014612;
+    box-shadow: 0 1px 10px #00000e12;
 }

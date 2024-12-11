@@ -88,7 +88,7 @@ const HeaderLinks = () => {
   return (
     <div
       className="flex h-[40px] gap-1 px-1 relative
-     py-2 justify-center items-center bg-[#0000004] border border-[#3f3f3f40] rounded-[1rem]"
+     py-2 justify-center items-center bg-[#0000004] border border-[#3f3f3f3c] rounded-[1rem]"
       style={{
         boxShadow:
           "0px 2px 4px rgba(0,0,0,.12),0px 8px 12px rgba(0,0,0,.08),0px 8px 16px rgba(0,0,0,.08)",

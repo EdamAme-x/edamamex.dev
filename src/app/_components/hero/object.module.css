@@ -1,0 +1,71 @@
+.object {
+    --size: 400px;
+    position: absolute;
+    width: var(--size);
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background-image: conic-gradient(
+        from var(--angle) at 50% 55%,
+        #ff45451a,
+        #00ff991a,
+        #006aff1a,
+        #ff00951a,
+        #ff45451a
+    );
+    animation: spin 4s cubic-bezier(0.4, 0.2, 0, 0.1) Infinite;
+    filter: blur(20px);
+    mask-image: radial-gradient(#000000, #00000066 80%);
+}
+
+.object::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: calc(
+        var(--size) * 6 / 5
+    );
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background: linear-gradient(
+        to right bottom,
+        #fffffff1,
+        #cccccc99
+    );
+    animation: spin 4.5s cubic-bezier(0.4, 0.2, 0, 0.1) Infinite;
+    filter: blur(40px);
+}
+
+.object::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    top: calc(var(--size) / 12);
+    left: calc(var(--size) / 12);
+    width: calc(var(--size) * 5 / 6);
+    aspect-ratio: 1/cos(30deg);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background-image: conic-gradient(
+        from var(--angle) at 50% 55%,
+        #1fffff66,
+        #ff1fff66,
+        #ffff1f66
+    );
+    animation: spin 4.5s cubic-bezier(0.4, 0.2, 0, 0.1) Infinite;
+    filter: blur(20px);
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}

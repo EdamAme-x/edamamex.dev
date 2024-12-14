@@ -22,7 +22,7 @@ export function AboutMeButton() {
 export function SocialLinkButton({ url, Icon, alt }: { url: string, Icon: IconType; alt: string }) {
   return <a href={url} title={alt} className="size-[32px] relative p-[7px] rounded-md">
       <Icon className="size-[18px]" />
-      <div className="insert-0 absolute inset-x-0 bottom-0 size-full [border-radius:inherit] px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff22] transform-gpu transition-all duration-300 group-hover:shadow-[inset_0_-8px_10px_#ffffff33] ease-in-out pointer-events-none">
+      <div className="insert-0 absolute inset-x-0 bottom-0 size-full [border-radius:inherit] px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff19] transform-gpu transition-all duration-300 group-hover:shadow-[inset_0_-8px_10px_#ffffff33] ease-in-out pointer-events-none">
       </div>
   </a>
 }

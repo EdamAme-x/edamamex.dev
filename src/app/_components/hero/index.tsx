@@ -7,7 +7,7 @@ import Image from "next/image";
 import { AboutMeButton, SocialLinkButton } from "./buttons";
 import { WhitenessText } from "./whiteness-text";
 import { socialLinks } from "@/consts/social-links";
-// import { Object } from "./object";
+import { Object } from "./object";
 
 export const Hero = () => {
   return (
@@ -19,7 +19,7 @@ export const Hero = () => {
     >
       <HeroBranding />
       <div className="w-1/2 h-full flex justify-end items-center">
-          {/* <Object /> */}
+          <Object />
       </div>
     </div>
   );
@@ -39,7 +39,7 @@ const HeroBranding = () => {
             <Image src={ShinyStar} alt="Shiny Star" className="inline h-4 w-4" />
             <hr className="mx-2 h-4 w-px shrink-0 bg-gray-300/50" />{" "}
             <span
-              className="inline text-xs py-[1px] animate-gradient bg-gradient-to-r from-purple-400/75 via-pink-300 to-purple-400/75 bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent"
+              className="inline text-xs py-[1px] animate-gradient bg-gradient-to-r from-white/[0.95] via-gray-400/[0.95] to-white/[0.95] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent"
             >
               Latest Blog Post
             </span>
@@ -48,7 +48,7 @@ const HeroBranding = () => {
         </div>
         <h1 className="text-5xl font-bold inline-flex gap-4 flex-wrap">
           <WhitenessText text="Limitless" />
-          <span className="bg-clip-text text-transparent bg-gradient-to-br from-sky-300 to-pink-400 [filter:drop-shadow(0_0px_12px_rgba(178,178,178,.3))] pb-1">Creativity</span>
+          <span className="bg-clip-text text-transparent bg-gradient-to-br from-sky-300 to-pink-400 [filter:drop-shadow(0_0px_12px_rgba(178,178,178,.4))] pb-1">Creativity</span>
         </h1>
         <h2 className="text-md font-light text-gray-500">
           I{"'"}m Web developer and OSS contributor.
